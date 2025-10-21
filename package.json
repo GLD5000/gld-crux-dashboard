@@ -5,6 +5,8 @@
   "scripts": {
     "//prepare": "Installs Husky hooks",
     "prepare": "husky",
+    "//get-crux-history": "Runs CrUX History API with API Key",
+    "get-crux-history": "node --env-file=.env src/utils/web-vitals/chromeUxHistory.mjs",
     "start-up": "git pull && npm run test && npm run dev",
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
