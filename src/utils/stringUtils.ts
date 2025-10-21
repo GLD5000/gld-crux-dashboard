@@ -32,7 +32,6 @@ export function decodeAllSafe(encodedURI: string) {
   try {
     return decodeURIComponent(decodeHTMLEntities(encodedURI)); // eslint-disable-next-line
   } catch (e) {
-     
     return encodedURI; // Return the original URI if decoding fails
   }
 }
