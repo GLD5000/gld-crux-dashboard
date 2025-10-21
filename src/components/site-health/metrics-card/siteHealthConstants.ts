@@ -1,0 +1,1 @@
+export const KIBIBYTE_MULTIPLIER = 1.024;

@@ -1,0 +1,40 @@
+"use client";
+import React from "react";
+import path from "path";
+import { standardText } from "../../ui/twStrings";
+import useCrUxHistoryJson from "../useCrUxHistoryJson";
+import { CrUxHistoryJson } from "../CruxHistoryTypes";
+import SlideNavigation from "./SlideNavigation";
+import SiteHealthSlideContent from "./SiteHealthSlideContent";
+import { useQueryParams } from "@/utils/searchParamsURL";
+import { SiteHealthSlideKeyLookup } from "./SiteHealthSlideData";
+
+export default function SiteHealthSlide() {
+  const [slideKey] = useQueryParams("sk", "lcp");
+
+  const amazonUk: {
+    data: CrUxHistoryJson | null;
+    isLoading: boolean;
+    refetch: () => void;
+  } = useCrUxHistoryJson(path.join("crux-history", "amazon_co_uk.json"));
+  const amazonRow: {
+    data: CrUxHistoryJson | null;
+    isLoading: boolean;
+    refetch: () => void;
+  } = useCrUxHistoryJson(path.join("crux-history", "amazon_com.json"));
+  if (
+    !amazonRow ||
+    amazonRow.data === null ||
+    !amazonUk ||
+    amazonUk.data === null
+  )
+    return null;
+  const dataSets = [amazonUk.data, amazonRow.data];
+  const metricKey = SiteHealthSlideKeyLookup[slideKey];
+  return (
+    <div className={`w-full max-w-400 mx-auto ${standardText}`}>
+      <SlideNavigation />
+      <SiteHealthSlideContent metricKey={metricKey} dataSets={dataSets} />
+    </div>
+  );
+}
