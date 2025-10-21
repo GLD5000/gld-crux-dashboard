@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "//prepare": "Installs Husky hooks",
+    "prepare": "husky",
+    "start-up": "git pull && npm run test && npm run dev",
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
@@ -14,6 +17,8 @@
     "next": "15.5.6"
   },
   "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
     "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^19",
