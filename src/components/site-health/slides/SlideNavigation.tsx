@@ -40,7 +40,7 @@ export default function SlideNavigation() {
   const [slideKey, setSlideKey] = useQueryParams("sk", "lcp");
   return (
     <nav>
-      <ol className="flex flex-wrap gap-1 list-none justify-center">
+      <ol className="flex flex-wrap gap-1 list-none justify-center my-1">
         {Object.entries(SlideNavigationPathObject)
           // .filter((breadcrumb) => {
           //     const isCore = !cwv[breadcrumb[0]];
