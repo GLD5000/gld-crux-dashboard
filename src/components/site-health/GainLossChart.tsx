@@ -1,6 +1,7 @@
 import React from "react";
 import { mutedBorderBottom, mutedBorderY } from "../ui/twStrings";
 import { VerticalAxisSpan } from "./SparkLines";
+import { roundMetrics } from "@/utils/numberUtils";
 
 export default function GainLossChart({
   input,
@@ -83,5 +84,9 @@ function getMinMaxRange(numberArray: number[]) {
   const max = Math.max(...numberArray);
   const maxBound = Math.max(Math.abs(min), max);
   const range = maxBound * 2;
-  return { min: 0 - maxBound, max: maxBound, range };
+  return {
+    min: roundMetrics(0 - maxBound),
+    max: roundMetrics(maxBound),
+    range,
+  };
 }
