@@ -5,7 +5,7 @@ function TypographyH1({ className, ...props }: React.ComponentProps<"h1">) {
   return (
     <h1
       className={cn(
-        `scroll-m-20 text-4xl font-Avenir-black tracking-tight lg:text-5xl ${standardText}`,
+        `scroll-m-20 text-4xl font-black tracking-tight lg:text-5xl ${standardText}`,
         className,
       )}
       {...props}
@@ -16,7 +16,7 @@ function TypographyH2({ className, ...props }: React.ComponentProps<`h2`>) {
   return (
     <h2
       className={cn(
-        `scroll-m-20 border-b pb-2 text-3xl font-Avenir-heavy tracking-tight first:mt-0 ${standardText}`,
+        `scroll-m-20 border-b pb-2 text-3xl font-bold tracking-tight first:mt-0 ${standardText}`,
         className,
       )}
       {...props}
@@ -27,7 +27,7 @@ function TypographyH3({ className, ...props }: React.ComponentProps<`h3`>) {
   return (
     <h3
       className={cn(
-        `scroll-m-20 text-2xl font-Avenir-heavy tracking-tight ${standardText}`,
+        `scroll-m-20 text-2xl font-bold tracking-tight ${standardText}`,
         className,
       )}
       {...props}
@@ -38,7 +38,7 @@ function TypographyH4({ className, ...props }: React.ComponentProps<`h4`>) {
   return (
     <h4
       className={cn(
-        `scroll-m-20 text-xl font-Avenir-heavy tracking-tight ${standardText}`,
+        `scroll-m-20 text-xl font-bold tracking-tight ${standardText}`,
         className,
       )}
       {...props}
@@ -68,7 +68,7 @@ function TypographyList({ className, ...props }: React.ComponentProps<`ul`>) {
   return (
     <ul
       {...props}
-      className={cn(`list-disc ${standardText} font-Avenir-medium`, className)}
+      className={cn(`list-disc ${standardText} font-sans`, className)}
     />
   );
 }
@@ -90,7 +90,7 @@ function TypographyInlineCode({
   return (
     <code
       className={cn(
-        `relative rounded ${mutedBg} px-[0.3rem] py-[0.2rem] font-mono text-sm font-Avenir-heavy ${standardText}`,
+        `relative rounded ${mutedBg} px-[0.3rem] py-[0.2rem] font-mono text-sm font-bold ${standardText}`,
         className,
       )}
       {...props}
@@ -104,7 +104,7 @@ function TypographyLarge({ className, ...props }: React.ComponentProps<`div`>) {
   return (
     <div
       {...props}
-      className={cn(`text-lg font-Avenir-heavy ${standardText}`, className)}
+      className={cn(`text-lg font-bold ${standardText}`, className)}
     />
   );
 }

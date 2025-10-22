@@ -9,7 +9,7 @@ export default function CrUxHistoryXScale({
 }) {
   return (
     <div
-      className={`flex justify-between font-Avenir-medium text-gray-700 dark:text-gray-300 mt-1`}
+      className={`flex justify-between font-sans text-xs text-gray-700 dark:text-gray-300 mt-1`}
     >
       {
         collectionPeriods.reduce(

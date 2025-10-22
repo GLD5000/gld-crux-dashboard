@@ -101,7 +101,7 @@ export default function MetricsCard({ dataIn }: { dataIn: PsiReport }) {
         <a
           href={url}
           target="_blank"
-          className="block text-base m-0 text-center dark:text-neutral-400 text-neutral-500 w-fit overflow-hidden max-w-[calc(100%-40px)] h-auto bg-transparent box-border px-1 font-Avenir-light line-clamp-1 whitespace-pre text-ellipsis hover:underline"
+          className="block text-base m-0 text-center dark:text-neutral-400 text-neutral-500 w-fit overflow-hidden max-w-[calc(100%-40px)] h-auto bg-transparent box-border px-1 font-light line-clamp-1 whitespace-pre text-ellipsis hover:underline"
         >
           <span> {url.replace("https://www.", "")}</span>
         </a>

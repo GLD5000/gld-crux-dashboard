@@ -126,7 +126,7 @@ export function TableCaption({
   return (
     <caption
       data-slot="table-caption"
-      className={cn(`mt-4 text-sm font-Avenir-light`, className)}
+      className={cn(`mt-4 text-sm font-light`, className)}
       {...props}
     />
   );

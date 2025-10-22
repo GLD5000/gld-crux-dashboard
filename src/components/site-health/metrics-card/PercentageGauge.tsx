@@ -51,7 +51,7 @@ export default function PercentageGauge({
           className={`stroke-[2px] ${strokeColour} fill-none`}
         />
       </svg>
-      <span className="text-2xl font-Avenir-heavy text-black col-start-1 row-start-1 w-fit h-fit text-center mx-auto my-auto">
+      <span className="text-2xl font-bold text-black col-start-1 row-start-1 w-fit h-fit text-center mx-auto my-auto">
         {percentage}
       </span>
     </div>

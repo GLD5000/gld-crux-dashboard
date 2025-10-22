@@ -20,7 +20,7 @@ import {
 
 export interface MetricsTableProps {
   columnData: Record<string, Record<string, string>>;
-  columnFunctions?: Record<string, (input: string) => ReactNode>;  
+  columnFunctions?: Record<string, (input: string) => ReactNode>;
   tableRows: Record<string, string>[];
   tableFooter?: Record<string, string>;
   tableCaption?: string;
@@ -28,13 +28,13 @@ export interface MetricsTableProps {
 
 interface QueryParams {
   deviceSelected: number;
-  setDeviceSelected: (value: number) => void;  
+  setDeviceSelected: (value: number) => void;
   dataSelected: number;
-  setDataSelected: (value: number) => void;  
+  setDataSelected: (value: number) => void;
   zoom: boolean;
-  setZoom: (value: boolean) => void;  
+  setZoom: (value: boolean) => void;
   lineStyle: string;
-  setLineStyle: (value?: string) => void;  
+  setLineStyle: (value?: string) => void;
 }
 
 export default function MetricsTable({ data }: { data?: MetricsTableProps }) {
@@ -76,7 +76,7 @@ export default function MetricsTable({ data }: { data?: MetricsTableProps }) {
                     setSortDirection(!sortDirection);
                   }}
                   key={`${title}`}
-                  className={`text-left font-Avenir-black font-normal ${highlightTextHover} hover:underline hover:underline-offset-2 transition cursor-pointer`}
+                  className={`text-left font-black font-normal ${highlightTextHover} hover:underline hover:underline-offset-2 transition cursor-pointer`}
                 >
                   {title}
                 </TableHead>
@@ -100,7 +100,7 @@ export default function MetricsTable({ data }: { data?: MetricsTableProps }) {
                   return (
                     <TableCell
                       key={`${tableRow[keyString]}-${index}-${title}`}
-                      className={`w-fit text-left font-Avenir-medium  cursor-pointer ${className ? className : ""}`}
+                      className={`w-fit text-left font-sans  cursor-pointer ${className ? className : ""}`}
                       onClick={() => {
                         selectLineGraph({
                           rowName: tableRow.device,
@@ -124,14 +124,14 @@ export default function MetricsTable({ data }: { data?: MetricsTableProps }) {
             ))}
         </TableBody>
         {tableFooter && (
-          <TableFooter className="font-Avenir-light text-sm">
+          <TableFooter className="font-light text-sm">
             <TableRow className="border-none">
               {Object.entries(columnData).map((entry, index) => {
                 const [keyString, { title, className }] = entry;
                 return (
                   <TableCell
                     key={`${tableFooter[keyString]}-${index}-${title}`}
-                    className={`text-left ${standardText} font-Avenir-medium font-normal cursor-pointer ${className ? className : ""}`}
+                    className={`text-left ${standardText} font-sans font-normal cursor-pointer ${className ? className : ""}`}
                     onClick={() => {
                       selectLineGraph({
                         rowName: "Overall",

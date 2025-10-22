@@ -54,7 +54,7 @@ export default function SiteHealth() {
                     <span className="block m-auto p-0">Refresh Data</span>
                 </button>
                 {lastUpdated && (
-                    <div className="text-left text-base  font-Avenir-light text-neutral-500 dark:text-neutral-400 h-5 block">
+                    <div className="text-left text-base  font-light text-neutral-500 dark:text-neutral-400 h-5 block">
                         Last updated: {date.split('-').toReversed().join('/')}{' '}
                         at {time.split(':')[0]}:{time.split(':')[1]}
                     </div>
