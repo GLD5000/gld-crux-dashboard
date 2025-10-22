@@ -113,7 +113,7 @@ export default function DisparityChart({
       ];
   return (
     <section
-      className="grid p-2 md:p-4 w-full mx-auto"
+      className="grid w-full mx-auto"
       onMouseLeave={() => {
         setXIndex(undefined);
       }}

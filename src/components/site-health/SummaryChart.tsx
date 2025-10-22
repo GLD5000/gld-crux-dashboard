@@ -43,7 +43,7 @@ export default function SummaryChart({
     },
   ];
   return (
-    <section className="grid p-2 md:p-4 w-full mx-auto">
+    <section className="grid w-full mx-auto">
       <div className="flex flex-wrap gap-2 justify-between">
         {Object.entries(localeMetrics).map((entry, index) => (
           <WebVitalStatic
