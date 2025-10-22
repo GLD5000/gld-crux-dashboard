@@ -10,7 +10,7 @@ export default function CruxLineStyleButtons() {
   ]);
 
   return (
-    <div className="grid grid-cols-[auto_auto] gap-2 align-middle w-fit h-6 p-0 m-0 text-inherit bg-transparent border-none">
+    <div className="grid grid-cols-[auto_auto] gap-2 items-center w-fit h-6 p-0 m-0 text-inherit bg-transparent border-none">
       <div className="flex gap-2">
         <LineStyleButton
           setLineStyle={setLineStyle}
@@ -35,7 +35,7 @@ export default function CruxLineStyleButtons() {
         // onClick={() => {
         //     setLineStyle();
         // }}
-        className="grid align-middle w-[4.5em] h-6 m-0 p-1 bg-transparent rounded border-none  text-neutral-500 dark:text-neutral-400"
+        className="grid items-center w-[4.5em] h-6 m-0 p-1 bg-transparent rounded border-none  text-neutral-500 dark:text-neutral-400"
       >
         <span className="text-xs text-gray-700 transition dark:text-gray-300">
           {lineStyle === "cma"

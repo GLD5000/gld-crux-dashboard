@@ -50,9 +50,9 @@ export default function MetricTitleBenchmark({
           </TypographyP>
         </div>
       </div>
-      {/* <div className='w-full h-full m-auto bg-green-500 text-center align-middle'>Good</div>
-          <div className='w-full h-full m-auto bg-orange-500 text-center align-middle'>Needs<br/> Improvement</div>
-          <div className='w-full h-full m-auto bg-red-500 text-center align-middle'>Poor</div> */}
+      {/* <div className='w-full h-full m-auto bg-green-500 text-center items-center'>Good</div>
+          <div className='w-full h-full m-auto bg-orange-500 text-center items-center'>Needs<br/> Improvement</div>
+          <div className='w-full h-full m-auto bg-red-500 text-center items-center'>Poor</div> */}
     </div>
   );
 }

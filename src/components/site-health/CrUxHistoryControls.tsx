@@ -15,8 +15,8 @@ export default function CrUxHistoryControls({
   setXyIndex?: Dispatch<number[] | undefined>;
 }) {
   return (
-    <div className="flex flex-wrap justify-between align-middle p-0 my-1 gap-2">
-      <div className="flex gap-2 justify-between align-middle h-fit w-full">
+    <div className="flex flex-wrap justify-between items-center p-0 my-1 gap-2">
+      <div className="flex gap-2 justify-between items-center h-fit w-full">
         <CruxLineStyleButtons />
         <CrUxHistoryZoomButton />
       </div>

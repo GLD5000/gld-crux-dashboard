@@ -32,7 +32,7 @@ export default function MetricScoreSectionVerbose({
     </span>
   ) : null;
   return (
-    <div className="flex justify-between w-full align-middle h-auto">
+    <div className="flex justify-between w-full items-center h-auto">
       {deviceSpan ? (
         <div className="flex gap-1">
           {<RatingColourPatch rating={rating} />} {deviceSpan}

@@ -41,7 +41,7 @@ export default function PageSize({ payloadNumber }: { payloadNumber: number }) {
         type="button"
         onClick={incrementPercentageString}
       >
-        <div className="flex justify-between w-full align-middle">
+        <div className="flex justify-between w-full items-center">
           <div
             className={`${ratingColour} h-3 w-3 ${ratingColour === "bg-green-400" ? "rounded-full" : "rounded-none"}`}
           ></div>

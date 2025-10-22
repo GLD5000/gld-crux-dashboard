@@ -19,7 +19,7 @@ export default function TricolourBarPlotReverse({
     barColours.good,
   ];
   return (
-    <div className="h-[20px] w-[96%] mx-auto relative grid  align-bottom">
+    <div className="h-[20px] w-[96%] mx-auto relative grid  items-end">
       <div className="flex w-full h-[5px] gap-[2px] mb-[4px]">
         {bars ? (
           barColoursArray.map((colour, index) => (

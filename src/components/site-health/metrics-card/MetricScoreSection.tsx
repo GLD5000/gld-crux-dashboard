@@ -44,7 +44,7 @@ export default function MetricScoreSection({
     </span>
   ) : null;
   return (
-    <div className="flex justify-between w-full align-middle h-auto">
+    <div className="flex justify-between w-full items-center h-auto">
       {deviceSpan ? (
         <div>
           {<RatingColourPatch rating={rating} />} {deviceSpan}

@@ -12,7 +12,7 @@ export default function CrUxHistoryZoomButton() {
       //     setZoom(!zoom);
       // }}
       type="button"
-      className="grid grid-cols-[auto_auto] gap-1 py-0 px-1 bg-transparent rounded h-fit border-none align-middle justify-center text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-50 focus:bg-gray-100 dark:focus:bg-gray-800 focus:text-gray-900 dark:focus:text-gray-50 focus-visible:border-none"
+      className="grid grid-cols-[auto_auto] gap-1 py-0 px-1 bg-transparent rounded h-fit border-none items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-50 focus:bg-gray-100 dark:focus:bg-gray-800 focus:text-gray-900 dark:focus:text-gray-50 focus-visible:border-none"
     >
       <div className="border grid border-none rounded-full w-6 h-6 my-auto">
         {/* <svg

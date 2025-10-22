@@ -118,7 +118,7 @@ export default function DisparityChart({
         setXIndex(undefined);
       }}
     >
-      <div className="w-fit flex gap-0 mb-2 mx-0 align-middle text-xs font-light">
+      <div className="w-fit flex gap-0 mb-2 mx-0 items-center text-xs font-light">
         {["Locale", "UK - Device", "ROW - Device"].map((value, index) => (
           <ButtonTab
             key={`${value}${index}`}
@@ -140,7 +140,7 @@ export default function DisparityChart({
         {titleString}
       </div>
 
-      <div className="w-fit text-2xl text-black dark:text-white flex align-middle gap-1">
+      <div className="w-fit text-2xl text-black dark:text-white flex items-center gap-1">
         <RatingColourPatch rating={rating} />
         {scoreString}
       </div>

@@ -62,7 +62,7 @@ export default function CrUxHistoryGraphMulti({
     <div
       className={`grid w-full max-w-160 mx-auto p-2 md:p-4 h-auto rounded-lg border ${mutedBorder} border-solid bg-transparent ${mutedText}`}
     >
-      <div className="w-fit flex gap-0 mb-2 mx-0 align-middle text-xs font-light">
+      <div className="w-fit flex gap-0 mb-2 mx-0 items-center text-xs font-light">
         {tabArray.map((string, index) => (
           <ButtonTab
             key={string}
@@ -80,7 +80,7 @@ export default function CrUxHistoryGraphMulti({
         ))}
       </div>
       <div className="w-fit text-base text-black dark:text-white">{title}</div>
-      <div className="w-fit text-2xl text-black dark:text-white flex align-middle gap-1">
+      <div className="w-fit text-2xl text-black dark:text-white flex items-center gap-1">
         <RatingColourPatch rating={latestRating} />
         {latestScoreString}
       </div>

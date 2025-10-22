@@ -24,7 +24,7 @@ export default function SparkLines({
   average: number;
   slow: number;
   deviceSelected: number;
-  setDeviceSelected: (value: number) => void;  
+  setDeviceSelected: (value: number) => void;
   ratingsArray: string[];
   xyIndex?: number[];
   setXyIndex: React.Dispatch<React.SetStateAction<number[] | undefined>>;
@@ -64,11 +64,11 @@ export default function SparkLines({
       className={`grid grid-cols-[auto_1fr_auto]  w-full h-auto overflow-clip border border-solid ${mutedBorderY} border-x-transparent py-2`}
     >
       {zoom ? (
-        <div className="h-full w-fit row-start-1 col-start-1 relative grid align-middle group">
-          <div className="h-full w-fit bg-none transition grid ml-auto align-top">
+        <div className="h-full w-fit row-start-1 col-start-1 relative grid items-center group">
+          <div className="h-full w-fit bg-none transition grid ml-auto items-start">
             <VerticalAxisSpan>{maxNumber}</VerticalAxisSpan>
           </div>
-          <div className="h-full w-fit bg-none transition grid ml-auto align-middle">
+          <div className="h-full w-fit bg-none transition grid ml-auto items-center">
             <VerticalAxisSpan>
               {maxNumber < 1
                 ? Math.round(
@@ -77,30 +77,30 @@ export default function SparkLines({
                 : Math.round(0.5 * (maxNumber - minNumber) + minNumber)}
             </VerticalAxisSpan>
           </div>
-          <div className="h-full w-fit bg-none transition grid ml-auto align-bottom">
+          <div className="h-full w-fit bg-none transition grid ml-auto items-end">
             <VerticalAxisSpan> {minNumber}</VerticalAxisSpan>
           </div>
         </div>
       ) : (
         <div
-          className="h-full w-fit row-start-1 col-start-1 relative grid align-middle group"
+          className="h-full w-fit row-start-1 col-start-1 relative grid items-center group"
           style={{
             gridTemplateRows: `${slowHeight}% ${averageHeight - slowHeight}% 1fr`,
           }}
         >
-          <div className="h-full w-fit bg-none transition grid align-bottom ml-auto">
+          <div className="h-full w-fit bg-none transition grid items-end ml-auto">
             <VerticalAxisSpan> {slow}</VerticalAxisSpan>
           </div>
-          <div className="h-full w-fit bg-none transition grid align-bottom ml-auto">
+          <div className="h-full w-fit bg-none transition grid items-end ml-auto">
             <VerticalAxisSpan> {average}</VerticalAxisSpan>
           </div>
-          <div className="h-full w-fit bg-none transition grid align-bottom ml-auto">
+          <div className="h-full w-fit bg-none transition grid items-end ml-auto">
             <VerticalAxisSpan> {minNumber}</VerticalAxisSpan>
           </div>
         </div>
       )}
       <div
-        className="h-full w-full row-start-1 col-start-2 grid align-middle group p-0 m-0"
+        className="h-full w-full row-start-1 col-start-2 grid items-center group p-0 m-0"
         style={{
           gridTemplateRows: `${slowHeight}% ${averageHeight - slowHeight}% 1fr`,
         }}
@@ -160,22 +160,22 @@ export default function SparkLines({
         ))}
       </svg>
       <div
-        className="h-full w-fit row-start-1 col-start-3 relative grid align-middle group"
+        className="h-full w-fit row-start-1 col-start-3 relative grid items-center group"
         style={{
           gridTemplateRows: `${slowHeight}% ${averageHeight - slowHeight}% 1fr`,
         }}
       >
-        <div className="h-full w-fit bg-none transition grid mr-auto align-middle">
+        <div className="h-full w-fit bg-none transition grid mr-auto items-center">
           <VerticalAxisSpan>
             {!hideSlowGridline && ratingsArray[0]}
           </VerticalAxisSpan>
         </div>
-        <div className="h-full w-fit bg-none transition grid mr-auto align-middle">
+        <div className="h-full w-fit bg-none transition grid mr-auto items-center">
           <VerticalAxisSpan>
             {!hideAverageGridline && ratingsArray[1]}
           </VerticalAxisSpan>
         </div>
-        <div className="h-full w-fit bg-none transition grid mr-auto align-middle">
+        <div className="h-full w-fit bg-none transition grid mr-auto items-center">
           <VerticalAxisSpan>
             {!hideFastRating && ratingsArray[2]}
           </VerticalAxisSpan>

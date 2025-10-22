@@ -31,7 +31,7 @@ export default function AuditScore({
         </span>
       </div>
       <div className="grid gap-[3px] bg-transparent border-none text-base leading-[0.8] text-left p-0 m-0">
-        {/* <div className="flex justify-between w-full align-middle">
+        {/* <div className="flex justify-between w-full items-center">
                     <div
                         className={`${ratingColour} h-3 w-3 ${ratingColour === 'bg-green-400' ? 'rounded-full' : 'rounded-none'}`}
                     ></div>
