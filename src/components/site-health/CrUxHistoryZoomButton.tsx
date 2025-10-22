@@ -12,9 +12,9 @@ export default function CrUxHistoryZoomButton() {
       //     setZoom(!zoom);
       // }}
       type="button"
-      className="grid grid-cols-[auto_auto] gap-1 py-0 px-1 bg-transparent rounded  border-none align-middle text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-50 focus:bg-gray-100 dark:focus:bg-gray-800 focus:text-gray-900 dark:focus:text-gray-50 focus-visible:border-none"
+      className="grid grid-cols-[auto_auto] gap-1 py-0 px-1 bg-transparent rounded h-fit border-none align-middle justify-center text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-gray-50 focus:bg-gray-100 dark:focus:bg-gray-800 focus:text-gray-900 dark:focus:text-gray-50 focus-visible:border-none"
     >
-      <div className="border grid border-current rounded-full w-6 h-6 my-auto">
+      <div className="border grid border-none rounded-full w-6 h-6 my-auto">
         {/* <svg
                     viewBox="0 0 16 16"
                     className="w-full h-full stroke-current fill-none"
@@ -48,7 +48,7 @@ export default function CrUxHistoryZoomButton() {
           )}
         </svg>
       </div>
-      <span className="text-xs ">Zoom</span>
+      <span className="text-xs block h-fit my-auto">Zoom</span>
     </button>
   );
 }

@@ -35,7 +35,7 @@ export default function CruxLineStyleButtons() {
         // onClick={() => {
         //     setLineStyle();
         // }}
-        className="grid align-middle w-[7em] h-6 m-0 text-inherit p-1 bg-transparent rounded border-none  text-neutral-500 dark:text-neutral-400"
+        className="grid align-middle w-[4.5em] h-6 m-0 p-1 bg-transparent rounded border-none  text-neutral-500 dark:text-neutral-400"
       >
         <span className="text-xs text-gray-700 transition dark:text-gray-300">
           {lineStyle === "cma"
@@ -54,7 +54,7 @@ function LineStyleButton({
   path,
   value,
 }: {
-  setLineStyle: (value?: string) => void;  
+  setLineStyle: (value?: string) => void;
   lineStyle: string;
   path: string;
   value: string;
