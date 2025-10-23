@@ -76,7 +76,7 @@ export default function MetricsTable({ data }: { data?: MetricsTableProps }) {
                     setSortDirection(!sortDirection);
                   }}
                   key={`${title}`}
-                  className={`text-left font-black font-normal ${highlightTextHover} hover:underline hover:underline-offset-2 transition cursor-pointer`}
+                  className={`text-left font-normal ${highlightTextHover} hover:underline hover:underline-offset-2 transition cursor-pointer`}
                 >
                   {title}
                 </TableHead>

@@ -1,7 +1,7 @@
 import React from "react";
 import { CrUxHistoryJson, MetricHistogramKeys } from "./CruxHistoryTypes";
 import DisparityChart from "./DisparityChart";
-import { mutedBorder, mutedText } from "../ui/twStrings";
+import { mutedText } from "../ui/twStrings";
 
 export default function MetricDisparityCard({
   dataSets,
@@ -12,7 +12,7 @@ export default function MetricDisparityCard({
 }) {
   return (
     <div
-      className={`grid w-full max-w-160 h-fit p-2 md:p-4 gap-4 rounded-lg border ${mutedBorder} border-solid bg-transparent ${mutedText}`}
+      className={`grid w-full max-w-160 h-fit p-2 md:p-4 gap-4  bg-transparent ${mutedText}`}
     >
       <div className="grid gap-4 w-full h-fit my-auto mx-auto">
         <DisparityChart dataSets={dataSets} metricKey={metricKey} />

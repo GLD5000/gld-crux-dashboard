@@ -4,7 +4,6 @@ import { cn } from "@/utils/tailwind/twUtils";
 import * as React from "react";
 import {
   mutedBgHover,
-  mutedBorder,
   mutedBorderBottom,
   mutedText,
   standardBg,
@@ -17,12 +16,7 @@ export function TableWrapper({
   ...props
 }: React.ComponentProps<`section`>) {
   return (
-    <div
-      className={cn(
-        `p-2 md:p-4 border ${mutedText} ${mutedBorder} rounded-lg border-solid relative w-full`,
-        className,
-      )}
-    >
+    <div className={cn(`p-2 md:p-4 ${mutedText} relative w-full`, className)}>
       <section
         data-slot="table-wrapper"
         className={` relative w-full overflow-x-auto`}
