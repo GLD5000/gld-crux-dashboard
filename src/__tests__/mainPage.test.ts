@@ -1,4 +1,4 @@
-import { cruxJsonArray } from "@/utils/cruxJsonArray";
+// import { cruxJsonArray } from "@/utils/cruxJsonArray";
 // import { getDirectoryTsxList } from "@/utils/getFiles";
 import {
   axeHasNoViolations,
@@ -8,19 +8,19 @@ import {
 } from "@/utils/tests";
 import path from "path";
 
-beforeEach(() => {
-  jest
-    .spyOn(global, "fetch")
-    .mockImplementation(
-      jest.fn(() =>
-        Promise.resolve({ json: () => cruxJsonArray }),
-      ) as jest.Mock,
-    );
-});
+// beforeEach(() => {
+//   jest
+//     .spyOn(global, "fetch")
+//     .mockImplementation(
+//       jest.fn(() =>
+//         Promise.resolve({ json: () => cruxJsonArray }),
+//       ) as jest.Mock,
+//     );
+// });
 
-afterEach(() => {
-  jest.restoreAllMocks();
-});
+// afterEach(() => {
+//   jest.restoreAllMocks();
+// });
 const directory = path.join(
   __dirname.replace("__tests__", "components"),
   "site-health",
