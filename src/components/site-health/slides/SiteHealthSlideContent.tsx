@@ -13,12 +13,12 @@ export default function SiteHealthSlideContent({
   metricKey: MetricHistogramKeys;
   dataSets: CrUxHistoryJson[];
 }) {
-  const [slideKey] = useQueryParams("sk", "lcp");
+  const [slideKey] = useQueryParams("sk", "cwv");
 
   const groupSlideHeaders = Object.keys(groupSlides);
   const isGroupSlide = groupSlideHeaders.some((value) => value === slideKey);
   return (
-    <section className={`px-2 md:px-8 gap-8 w-full flex flex-wrap `}>
+    <section className={`p-4 gap-4 w-full flex flex-wrap `}>
       {isGroupSlide && <MetricGroupContent dataSets={dataSets} />}
       {!isGroupSlide && (
         <StandardMetricContent dataSets={dataSets} metricKey={metricKey} />

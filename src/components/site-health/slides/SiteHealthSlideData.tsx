@@ -169,25 +169,25 @@ export const metricInfo: Record<string, metricInfoInterface> = {
     unit: "",
     acronym: "CWV",
     description:
-      "Core Web Vitals are the subset of Web Vitals that apply to all web pages, should be measured by all site owners, and will be surfaced across all Google tools. Each of the Core Web Vitals represents a distinct facet of the user experience, is measurable in the field, and reflects the real-world experience of a critical user-centric outcome.",
+      "Core Web Vitals should be measured by all site owners, and are surfaced across all Google tools. Each represents a distinct facet of the user experience and reflects the real-world experience of a critical user-centric outcome.",
     title: "Core Web Vitals",
     url: "https://web.dev/articles/vitals#core-web-vitals",
     facts: [
       "Core Web Vitals are the critical metrics for understanding and delivering a great user experience",
       "Core Web Vitals are used by Google in search rankings",
-      "Google recommended threshold to measure is the 75th percentile of page loads, segmented across mobile and desktop devices.",
+      "Google recommended threshold to measure is the 75th percentile of page loads, segmented across mobile and desktop devices",
     ],
   },
   owv: {
     unit: "",
     acronym: "OWV",
     description:
-      "While the Core Web Vitals are the critical metrics for understanding and delivering a great user experience, there are other supporting metrics. These other metrics can serve as proxy—or as supplemental metrics for the three Core Web Vitals—to help capture a larger part of the experience or to aid in diagnosing a specific issue.",
+      "Other Web Vitals are supporting metrics. These can serve as proxy or supplemental metrics for the Core Web Vitals to capture a larger part of the experience or aid in diagnosing a specific issue.",
     title: "Other Web Vitals",
     url: "https://web.dev/articles/vitals#other-web-vitals",
     facts: [
       "Other Web Vitals are not used by Google in search rankings but contribute to the Core Web Vitals that are",
-      "Time to First Byte (TTFB) and First Contentful Paint (FCP) are both vital aspects of the loading experience, useful in diagnosing issues with LCP (slow server response times or render-blocking resources, respectively).",
+      "Time to First Byte (TTFB) and First Contentful Paint (FCP) are both vital aspects of the loading experience, useful in diagnosing issues with LCP (slow server response times or render-blocking resources, respectively)",
     ],
   },
   largest_contentful_paint: {

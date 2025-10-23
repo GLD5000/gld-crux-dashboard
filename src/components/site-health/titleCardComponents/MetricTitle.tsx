@@ -13,7 +13,7 @@ export default function MetricTitle({
 }: {
   metricKey?: string;
 }) {
-  const [slideKey, setSlideKey] = useQueryParams("sk", "lcp");
+  const [slideKey, setSlideKey] = useQueryParams("sk", "cwv");
 
   return (
     <div className="flex flex-wrap gap-4 w-fit h-fit my-auto mx-auto">

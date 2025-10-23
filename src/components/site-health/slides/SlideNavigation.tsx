@@ -37,7 +37,7 @@ const keyLookup: Record<string, string> = {
 };
 
 export default function SlideNavigation() {
-  const [slideKey, setSlideKey] = useQueryParams("sk", "lcp");
+  const [slideKey, setSlideKey] = useQueryParams("sk", "cwv");
   return (
     <nav>
       <ol className="flex flex-wrap gap-1 list-none justify-center my-1">
@@ -69,7 +69,7 @@ export default function SlideNavigation() {
             return (
               <BreadcrumbLink
                 key={`breadcrumb-${index}`}
-                className={`${shouldShow ? "" : "hidden"}`}
+                className={`${shouldShow ? "" : "hidden xl:block"}`}
                 isCategory={isCategory}
                 input={
                   breadcrumb[0] === slideKey

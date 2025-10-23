@@ -8,7 +8,7 @@ export default function MetricIntro({
   metricKey?: string;
 }) {
   return (
-    <TypographyP className={`w-full mx-auto ${mutedText} mb-0`}>
+    <TypographyP className={`w-full text-sm mx-auto ${mutedText} mb-0`}>
       {metricInfo[metricKey].description}
     </TypographyP>
   );

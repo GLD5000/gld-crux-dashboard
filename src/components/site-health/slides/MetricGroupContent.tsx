@@ -11,7 +11,7 @@ export default function MetricGroupContent({
 }: {
   dataSets: CrUxHistoryJson[];
 }) {
-  const [slideKey] = useQueryParams("sk", "lcp");
+  const [slideKey] = useQueryParams("sk", "cwv");
 
   const metricKeys = Object.keys(groupSlides[slideKey]).filter(
     (value) => value !== slideKey,

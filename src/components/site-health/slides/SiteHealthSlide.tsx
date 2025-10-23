@@ -10,7 +10,7 @@ import { useQueryParams } from "@/utils/searchParamsURL";
 import { SiteHealthSlideKeyLookup } from "./SiteHealthSlideData";
 
 export default function SiteHealthSlide() {
-  const [slideKey] = useQueryParams("sk", "lcp");
+  const [slideKey] = useQueryParams("sk", "cwv");
 
   const amazonUk: {
     data: CrUxHistoryJson | null;
