@@ -32,19 +32,19 @@ export default function MetricTitleBenchmark({
       ))}
       <div className="relative w-full h-12 col-span-3">
         <div
-          className={`w-[16px] h-[16px] translate-x-[-50%] left-[33.3%] top-[-4px] absolute box-border grid justify-center text-black dark:text-white`}
+          className={`w-4 h-4 translate-x-[-50%] left-[33.3%] -top-1 absolute box-border grid justify-center text-black dark:text-white`}
         >
-          <div className="border-2 border-solid border-current rounded-full w-[8px] h-[8px] box-border bg-current mx-auto"></div>
-          <div className="bg-current  w-[2px]  h-[8px] box-border mx-auto"></div>
+          <div className="border-2 border-solid border-current rounded-full w-2 h-2 box-border bg-current mx-auto"></div>
+          <div className="bg-current  w-0.5  h-2 box-border mx-auto"></div>
           <TypographyP className="my-0 text-inherit dark:text-inherit">
             {goodThreshold}
           </TypographyP>
         </div>
         <div
-          className={`w-[16px] h-[16px] translate-x-[-50%] left-[66.6%] top-[-4px] absolute box-border grid justify-center text-black dark:text-white`}
+          className={`w-4 h-4 translate-x-[-50%] left-[66.6%] -top-1 absolute box-border grid justify-center text-black dark:text-white`}
         >
-          <div className="border-2 border-solid border-current rounded-full w-[8px] h-[8px] box-border bg-current mx-auto"></div>
-          <div className="bg-current  w-[2px]  h-[8px] box-border mx-auto"></div>
+          <div className="border-2 border-solid border-current rounded-full w-2 h-2 box-border bg-current mx-auto"></div>
+          <div className="bg-current  w-0.5  h-2 box-border mx-auto"></div>
           <TypographyP className="my-0 text-inherit dark:text-inherit">
             {poorThreshold}
           </TypographyP>

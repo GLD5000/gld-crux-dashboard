@@ -37,7 +37,7 @@ export default function GainLossChart({
           className={`h-full w-full bg-none grid p-0 m-0 border border-solid border-transparent ${mutedBorderBottom}`}
         ></div>
       </div>
-      <div className="flex gap-[2px] md:gap-2 h-20 items-center row-start-1 col-start-2 m-0 box-border">
+      <div className="flex gap-0.5 md:gap-2 h-20 items-center row-start-1 col-start-2 m-0 box-border">
         {input.map((value, index) => {
           const isPositive = value >= 0;
           const barHeight = `${100 * (Math.abs(value) / range)}%`;

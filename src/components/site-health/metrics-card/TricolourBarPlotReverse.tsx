@@ -20,7 +20,7 @@ export default function TricolourBarPlotReverse({
   ];
   return (
     <div className="h-[20px] w-[96%] mx-auto relative grid  items-end">
-      <div className="flex w-full h-[5px] gap-[2px] mb-[4px]">
+      <div className="flex w-full h-[5px] gap-0.5 mb-[4px]">
         {bars ? (
           barColoursArray.map((colour, index) => (
             <div
@@ -39,10 +39,10 @@ export default function TricolourBarPlotReverse({
           style={{
             left: `${Math.min(pointer, 100)}%`,
           }}
-          className={`w-[16px] h-[16px] translate-x-[-7px] top-0 absolute box-border grid justify-center ${pointer > 100 ? "text-red-600 dark:text-red-500 " : "text-[#00000067] dark:text-[#ffffffcc]"}`}
+          className={`w-4 h-4 translate-x-[-7px] top-0 absolute box-border grid justify-center ${pointer > 100 ? "text-red-600 dark:text-red-500 " : "text-[#00000067] dark:text-[#ffffffcc]"}`}
         >
-          <div className="border-2 border-solid border-current rounded-full w-[8px] h-[8px] box-border"></div>
-          <div className="bg-current  w-[2px]  h-[8px] box-border mx-auto"></div>
+          <div className="border-2 border-solid border-current rounded-full w-2 h-2 box-border"></div>
+          <div className="bg-current  w-0.5  h-2 box-border mx-auto"></div>
         </div>
       </div>
     </div>

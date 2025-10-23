@@ -29,7 +29,6 @@ async function fetchJsonFiles(
   try {
     const response = await fetch(`/${folderPath}`);
     const jsonData = await response.json();
-
     setData(jsonData);
   } catch (error) {
     console.error("Error fetching JSON files:", error);

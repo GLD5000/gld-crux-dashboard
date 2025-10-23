@@ -27,7 +27,7 @@ export default function BreadcrumbLink({
     <li
       tabIndex={0}
       className={cn(
-        `w-fit px-4 py-1 rounded-sm border border-solid ${isCategory ? "text-base ml-[2px]" : "text-sm h-[28px] mt-auto"} ${path ? `${mutedBg} ${standardText}` : `${mutedBgInv} ${highlightTextInv}`} skew-x-[-20deg] grid items-center key`,
+        `w-fit px-4 py-1 rounded-sm border border-solid ${isCategory ? "text-base ml-0.5" : "text-sm h-[28px] mt-auto"} ${path ? `${mutedBg} ${standardText}` : `${mutedBgInv} ${highlightTextInv}`} skew-x-[-20deg] grid items-center key`,
         className,
       )}
       onFocus={() => {
