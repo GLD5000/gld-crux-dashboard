@@ -14,7 +14,7 @@ export default function MetricSummaryCard({
 }) {
   return (
     <div
-      className={`grid w-full max-w-160 h-fit mx-auto p-2 md:p-4 gap-4 rounded-lg border ${mutedBorder} border-solid bg-transparent ${mutedText}`}
+      className={`grid w-full max-w-160 h-fit p-2 md:p-4 gap-4 rounded-lg border ${mutedBorder} border-solid bg-transparent ${mutedText}`}
     >
       <MetricTitle metricKey={metricKey} />
       <MetricIntro metricKey={metricKey} />

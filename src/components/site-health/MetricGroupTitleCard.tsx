@@ -9,7 +9,7 @@ export default function MetricGroupTitleCard({
   metricKey?: string;
 }) {
   return (
-    <div className="grid w-full max-w-160 h-fit mx-auto gap-4">
+    <div className="grid w-full max-w-160 h-fit gap-4">
       <MetricTitle metricKey={metricKey} />
       <MetricIntro metricKey={metricKey} />
       <MetricFacts metricKey={metricKey} />

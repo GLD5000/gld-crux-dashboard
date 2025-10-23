@@ -62,7 +62,7 @@ export default function MetricsTable({ data }: { data?: MetricsTableProps }) {
     setLineStyle,
   };
   return (
-    <TableWrapper className="w-full h-auto max-w-160 mx-auto">
+    <TableWrapper className="w-full h-auto max-w-160">
       <Table>
         {tableCaption && <TableCaption>{tableCaption}</TableCaption>}
         <TableHeader>

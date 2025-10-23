@@ -19,7 +19,9 @@ export default function SiteHealthSlideContent({
   const groupSlideHeaders = Object.keys(groupSlides);
   const isGroupSlide = groupSlideHeaders.some((value) => value === slideKey);
   return (
-    <section className={`p-4 gap-4 w-full flex flex-wrap`}>
+    <section
+      className={`p-4 gap-4 flex flex-wrap w-fit justify-center mx-auto`}
+    >
       {isGroupSlide && <MetricGroupContent dataSets={dataSets} />}
       {!isGroupSlide && (
         <StandardMetricContent dataSets={dataSets} metricKey={metricKey} />
