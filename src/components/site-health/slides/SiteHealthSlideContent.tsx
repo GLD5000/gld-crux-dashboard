@@ -3,8 +3,9 @@ import React from "react";
 import { CrUxHistoryJson, MetricHistogramKeys } from "../CruxHistoryTypes";
 import StandardMetricContent from "./StandardMetricContent";
 import { groupSlides } from "./SlideNavigation";
-import { useQueryParams } from "@/utils/searchParamsURL";
+
 import MetricGroupContent from "./MetricGroupContent";
+import { useSlideKey } from "@/utils/slideHooks";
 
 export default function SiteHealthSlideContent({
   metricKey,
@@ -13,7 +14,7 @@ export default function SiteHealthSlideContent({
   metricKey: MetricHistogramKeys;
   dataSets: CrUxHistoryJson[];
 }) {
-  const [slideKey] = useQueryParams("sk", "cwv");
+  const [slideKey] = useSlideKey();
 
   const groupSlideHeaders = Object.keys(groupSlides);
   const isGroupSlide = groupSlideHeaders.some((value) => value === slideKey);

@@ -1,6 +1,6 @@
 import React from "react";
 import BreadcrumbLink from "./BreadcrumbLink";
-import { useQueryParams } from "@/utils/searchParamsURL";
+import { useSlideKey } from "@/utils/slideHooks";
 
 export type Path = {
   path: string;
@@ -37,7 +37,7 @@ const keyLookup: Record<string, string> = {
 };
 
 export default function SlideNavigation() {
-  const [slideKey, setSlideKey] = useQueryParams("sk", "cwv");
+  const [slideKey, setSlideKey] = useSlideKey();
   return (
     <nav>
       <ol className="flex flex-wrap gap-1 list-none justify-center my-1">

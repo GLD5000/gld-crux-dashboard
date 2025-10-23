@@ -4,12 +4,12 @@ import { PsiResults } from "../siteHealthTypes";
 import { KIBIBYTE_MULTIPLIER } from "./siteHealthConstants";
 import useSizePercentage from "./usePercentage";
 import TricolourBarPlot, { barColours } from "./TricolourBarPlot";
-import { useQueryParams } from "@/utils/searchParamsURL";
+import { useViewMode } from "@/utils/slideHooks";
 
 export default function PageSize({ payloadNumber }: { payloadNumber: number }) {
   const [percentageString, incrementPercentageString] =
     useSizePercentage(payloadNumber);
-  const [viewMode, setViewMode] = useQueryParams("view", "All");
+  const [viewMode, setViewMode] = useViewMode();
 
   if (!payloadNumber) return null;
   const maxPercentageNumber = Math.round(

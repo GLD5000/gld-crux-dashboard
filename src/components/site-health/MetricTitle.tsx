@@ -1,4 +1,3 @@
-import { useQueryParams } from "@/utils/searchParamsURL";
 import { highlightTextGroupHover } from "../ui/twStrings";
 import { TypographyH1, TypographyLead } from "../ui/typography";
 import MetricTitleBenchmark from "./MetricTitleBenchmark";
@@ -7,13 +6,14 @@ import {
   metricInfo,
 } from "./slides/SiteHealthSlideData";
 import { getIsSlideNavCategory } from "./slides/SlideNavigation";
+import { useSlideKey } from "@/utils/slideHooks";
 
 export default function MetricTitle({
   metricKey = "cumulative_layout_shift",
 }: {
   metricKey?: string;
 }) {
-  const [slideKey, setSlideKey] = useQueryParams("sk", "cwv");
+  const [slideKey, setSlideKey] = useSlideKey();
 
   return (
     <div className="flex flex-wrap gap-4 w-fit h-fit my-auto mx-auto">

@@ -6,11 +6,12 @@ import useCrUxHistoryJson from "../useCrUxHistoryJson";
 import { CrUxHistoryJson } from "../CruxHistoryTypes";
 import SlideNavigation from "./SlideNavigation";
 import SiteHealthSlideContent from "./SiteHealthSlideContent";
-import { useQueryParams } from "@/utils/searchParamsURL";
+
 import { SiteHealthSlideKeyLookup } from "./SiteHealthSlideData";
+import { useSlideKey } from "@/utils/slideHooks";
 
 export default function SiteHealthSlide() {
-  const [slideKey] = useQueryParams("sk", "cwv");
+  const [slideKey] = useSlideKey();
 
   const amazonUk: {
     data: CrUxHistoryJson | null;

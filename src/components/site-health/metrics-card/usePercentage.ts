@@ -1,6 +1,6 @@
 import { createStringSwitcher } from "@/utils/objectUtils";
 import { KIBIBYTE_MULTIPLIER } from "./siteHealthConstants";
-import { useQueryParams } from "@/utils/searchParamsURL";
+import { useSize } from "@/utils/slideHooks";
 
 export default function useSizePercentage(
   payloadNumber: number,
@@ -26,7 +26,7 @@ export default function useSizePercentage(
     Math.round((payloadNumber / (1600 * KIBIBYTE_MULTIPLIER)) * 10) / 10
   }x Fast`; //uses good mobile size (1600 KiB)
 
-  const [sizeType, setSizeType] = useQueryParams("size", "mb");
+  const [sizeType, setSizeType] = useSize();
   const sizeStringLookup: Record<string, string> = {
     rating: rating,
     mb: megaBytes,
