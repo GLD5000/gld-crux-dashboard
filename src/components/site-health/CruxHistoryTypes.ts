@@ -14,15 +14,7 @@ export interface DateTypes {
 interface NavigationType {
   fractionTimeseries: NavigationFractions;
 }
-interface NavigationFractions {
-  restore: number[];
-  back_forward: number[];
-  back_forward_cache: number[];
-  prerender: number[];
-  navigate: number[];
-  navigate_cache: number[];
-  reload: number[];
-}
+type NavigationFractions = Record<string, { fractions: number[] }>;
 interface MetricFraction {
   fractionTimeseries: FractionTimeseries;
 }
@@ -67,6 +59,7 @@ export interface MetricAll extends MetricHistograms {
   largest_contentful_paint_image_time_to_first_byte: MetricPercentile;
   largest_contentful_paint_resource_type: MetricFraction;
   navigation_types: NavigationType;
+  form_factors?: NavigationType;
 }
 
 export type MetricHistogramKeys = keyof MetricHistograms;
@@ -82,7 +75,7 @@ interface CrUXHistory {
       formFactor?: string;
       origin: string;
     };
-    metrics: MetricHistograms;
+    metrics: MetricAll;
     collectionPeriods: CollectionPeriod[];
   };
   urlNormalizationDetails: UrlNormalizationDetails;

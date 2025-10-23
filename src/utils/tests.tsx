@@ -2,7 +2,7 @@
 import React from "react";
 import { render } from "@testing-library/react"; //act,
 import { importFile } from "@/utils/getFiles";
-import path from "path";
+// import path from "path";
 import { axe, toHaveNoViolations } from "jest-axe";
 
 expect.extend(toHaveNoViolations);
@@ -110,9 +110,9 @@ export function classNameTestVariants(
   variantsList.forEach((currentVariant) => {
     test(`${currentVariant} ${description}`, async () => {
       const MyComponent = (await importFile(directory, file)).default as ({
-        variant,  
+        variant,
       }: {
-        variant: string;  
+        variant: string;
       }) => React.JSX.Element;
       const { container } = render(<MyComponent variant={currentVariant} />);
 
@@ -133,19 +133,6 @@ export function classNameTestVariants(
   });
 }
 
-export function renderFileTest(directoryList: string[]) {
-  // Does not work in Jest - rebuild in Cypress
-  const file = "page.tsx";
-  directoryList.forEach((directory) => {
-    console.log(
-      "path.join(directory, file):",
-      path.join(__dirname.replace("utils", "app"), directory, file),
-    );
-    test(`${directory} should render`, async () => {
-      expect(true).toBeTruthy();
-    });
-  });
-}
 function hasRepeatedClassnames(classNames: string[]) {
   const uniqueClassList = new Set(classNames);
   const hasRepetition = uniqueClassList.size !== classNames.length;
@@ -165,7 +152,7 @@ export async function axeHasNoViolations(props: TestProps) {
   const { fileName, variant, directory } = props;
   return it(`${fileName}-${variant} should have no accessibility violations`, async () => {
     const MyComponent = (await importFile(directory, fileName))
-      .default as () => React.JSX.Element;  
+      .default as () => React.JSX.Element;
 
     // await act(async () => {
     const { container } = render(<MyComponent />);
@@ -179,7 +166,7 @@ export function linksHaveExplicitDisplay(props: TestProps) {
 
   test(`${fileName}-${variant} links should have explicitly set display mode`, async () => {
     const MyComponent = (await importFile(directory, fileName))
-      .default as () => React.JSX.Element;  
+      .default as () => React.JSX.Element;
     const { container } = render(<MyComponent />);
 
     const linkElements = container.querySelectorAll("a");
@@ -203,7 +190,9 @@ function hasExplicitDisplay(classNames: string) {
   const classArray = getClassArrayFromListString(classNames);
 
   return classArray.some((value) =>
-    ["grid", "block", "flex", "inline", "hidden"].includes(value),
+    ["grid", "block", "flex", "inline", "hidden", "inline-block"].includes(
+      value,
+    ),
   );
 }
 
@@ -212,7 +201,7 @@ export function classNamesHaveNoRepetition(props: TestProps) {
 
   test(`${fileName}-${variant} should have no className repetition`, async () => {
     const MyComponent = (await importFile(directory, fileName))
-      .default as () => React.JSX.Element;  
+      .default as () => React.JSX.Element;
     const { container } = render(<MyComponent />);
 
     const elementsWithClasses = container.querySelectorAll("[class]");
@@ -220,7 +209,6 @@ export function classNamesHaveNoRepetition(props: TestProps) {
     const classNamesArray = Array.from(elementsWithClasses).map((element) => {
       return element.getAttribute("class") || "";
     });
-    console.log("classNamesArray:", classNamesArray);
     classNamesArray.forEach((stringClassList) => {
       const repeatedNames = getRepeatedClassnames(stringClassList);
       try {
@@ -265,7 +253,7 @@ export function tailwindPrefixesHaveNoRepetition(props: TestProps) {
 
   test(`${fileName}-${variant} should have no Tailwind prefix repetition`, async () => {
     const MyComponent = (await importFile(directory, fileName))
-      .default as () => React.JSX.Element;  
+      .default as () => React.JSX.Element;
     const { container } = render(<MyComponent />);
 
     const elementsWithClasses = container.querySelectorAll("[class]");

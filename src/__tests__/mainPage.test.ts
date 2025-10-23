@@ -6,7 +6,7 @@ import {
   tailwindPrefixesHaveNoRepetition,
   linksHaveExplicitDisplay,
 } from "@/utils/tests";
-import path from "path";
+// import path from "path";
 
 // beforeEach(() => {
 //   jest
@@ -21,11 +21,12 @@ import path from "path";
 // afterEach(() => {
 //   jest.restoreAllMocks();
 // });
-const directory = path.join(
-  __dirname.replace("__tests__", "components"),
-  "site-health",
-);
-const fileName = "MetricTitleBenchmark.tsx";
+const directory = __dirname.replace("__tests__", "app");
+//path.join(
+//   __dirname.replace("__tests__", "components"),
+//   "site-health",
+// );
+const fileName = "page.tsx"; //"MetricTitleBenchmark.tsx";
 
 const props = { fileName, variant: "homepage", directory };
 axeHasNoViolations(props);
