@@ -42,7 +42,7 @@ export default function MetricTitle({
         </button>
       ) : (
         <div className="grid w-fit h-auto mx-auto">
-          <TypographyH1 className="w-fit mx-auto text-[4rem] lg:text-[5rem] my-0 tracking-wide leading-none lg:leading-none">
+          <TypographyH1 className="w-fit mx-auto text-[4rem] lg:text-[5rem] my-0 tracking-normal leading-none lg:leading-none">
             {metricInfo[metricKey].acronym}
           </TypographyH1>
           <TypographyLead className="mx-auto tracking-tighter">
