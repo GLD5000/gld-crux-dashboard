@@ -221,7 +221,7 @@ export const metricInfo: Record<string, metricInfoInterface> = {
 
     acronym: "INP",
     description:
-      "Interaction to Next Paint (INP) measures interactivity delay. To provide a good user experience, pages should have a INP of 200 milliseconds or less.",
+      "Interaction to Next Paint (INP) measures responsiveness. To provide a good user experience, pages should have a INP of 200 milliseconds or less.",
     title: "Interaction To Next Paint",
     url: "https://web.dev/articles/inp",
     facts: [
@@ -266,7 +266,7 @@ export const metricInfo: Record<string, metricInfoInterface> = {
     unit: "ms",
     acronym: "FCP",
     description:
-      "First Contentful Paint (FCP) measures the time from when the user first navigated to the page to when any part of the page's content is rendered on the screen.",
+      "First Contentful Paint (FCP) measures how long it takes the user to get visual feedback from navigation to when any part of the page's content is rendered on the screen.",
     title: "First Contentful Paint",
     url: "https://web.dev/articles/fcp",
     facts: [
@@ -287,7 +287,7 @@ export const metricInfo: Record<string, metricInfoInterface> = {
 
     acronym: "TTFB",
     description:
-      "Time to First Byte (TTFB) measures the time between the request for a resource and when the first byte of a response begins to arrive.",
+      "Time to First Byte (TTFB) measures the load time between the request for a resource and when the first byte of a response begins to arrive.",
     title: "Time To First Byte",
     url: "https://web.dev/articles/ttfb",
     facts: [
@@ -307,12 +307,12 @@ export const metricInfo: Record<string, metricInfoInterface> = {
     unit: "ms",
     acronym: "RTT",
     description:
-      "Provides an estimate of the HTTP (application layer) round trip time at the start of the navigation, based on recent network connections. N.B. Round trip time is a measure of the users to your site (based on their recent internet activity), and not of the site itself.",
+      "Measures the user's connection speed, estimating the HTTP (application layer) round trip time at the start of the navigation, based on recent network connections to their nearest server.",
     title: "Round Trip Time",
     url: "https://aws.amazon.com/what-is/rtt-in-networking/",
     facts: [
       "This measures user device connection speed (ping), not the website.",
-      "Affected by distance from servers and connection quality (signal)",
+      "Affected by distance from servers, device speed and connection quality (signal)",
     ],
   },
   largest_contentful_paint_image_time_to_first_byte: {
