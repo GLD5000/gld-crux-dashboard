@@ -1,5 +1,9 @@
 import { useQueryParams } from "@/utils/searchParamsURL";
-import { TypographyH1, TypographyLead } from "../../ui/typography";
+import {
+  TypographyH1,
+  TypographyH2,
+  TypographyLead,
+} from "../../ui/typography";
 import MetricTitleBenchmark from "../MetricTitleBenchmark";
 import {
   metricInfo,
@@ -19,23 +23,23 @@ export default function MetricTitle({
     <div className="flex flex-wrap gap-4 w-fit h-fit my-auto mx-auto">
       {SiteHealthSlideKeyReverseLookup[metricKey] !== slideKey &&
       !getIsSlideNavCategory(metricKey) ? (
-        <div
+        <button
           className={`grid w-fit h-auto mx-auto cursor-pointer group`}
           onClick={() => {
             setSlideKey(SiteHealthSlideKeyReverseLookup[metricKey]);
           }}
         >
-          <TypographyH1
-            className={`w-fit mx-auto text-[4rem] lg:text-[5rem] my-0 tracking-wide leading-none lg:leading-none ${highlightTextGroupHover}`}
+          <TypographyH2
+            className={`w-fit mx-auto text-[4rem] lg:text-[5rem] my-0 tracking-normal leading-none lg:leading-none ${highlightTextGroupHover}`}
           >
             {metricInfo[metricKey].acronym}
-          </TypographyH1>
+          </TypographyH2>
           <TypographyLead
             className={`mx-auto tracking-tighter ${highlightTextGroupHover} group-hover:underline`}
           >
             {metricInfo[metricKey].title}
           </TypographyLead>
-        </div>
+        </button>
       ) : (
         <div className="grid w-fit h-auto mx-auto">
           <TypographyH1 className="w-fit mx-auto text-[4rem] lg:text-[5rem] my-0 tracking-wide leading-none lg:leading-none">
