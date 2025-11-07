@@ -1,2 +1,2 @@
-# gld-psi-dashboard
-A dashboard for comparing PageSpeed Insight API Results
+# gld-crux-dashboard
+A dashboard for comparing CrUX History API Results
